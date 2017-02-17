@@ -27,8 +27,6 @@ defmodule S3DirectUpload.Mixfile do
   defp description do
     """
     Pre-signed S3 upload helper for client-side multipart POSTs.
-
-    See: [Browser Uploads to S3 using HTML POST Forms](https://aws.amazon.com/articles/1434/)
     """
   end
 
@@ -39,7 +37,7 @@ defmodule S3DirectUpload.Mixfile do
      maintainers: ["Andrew Kappen"],
      licenses: ["Apache 2.0"],
      links: %{"GitHub" => "https://github.com/akappen/s3_direct_upload",
-              "Docs" => "https://hexdocs.pm/s3_direct_upload"}
+              "Browser Uploads to S3 using HTML POST Forms" => "https://aws.amazon.com/articles/1434/"}
     ]
   end
 end
