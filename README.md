@@ -1,11 +1,13 @@
 # S3DirectUpload
 
-**TODO: Add description**
+Pre-signed S3 upload helper for client-side multipart POSTs.
+
+See: [Browser Uploads to S3 using HTML POST Forms](https://aws.amazon.com/articles/1434/)
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `s3_direct_upload` to your list of dependencies in `mix.exs`:
+S3DirectUpload can be installed by adding `s3_direct_upload` to your
+list of dependencies in `mix.exs` and then running `mix deps.get`:
 
 ```elixir
 def deps do
@@ -13,7 +15,19 @@ def deps do
 end
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/s3_direct_upload](https://hexdocs.pm/s3_direct_upload).
+This module expects three application configuration settings for the
+AWS access and secret keys and the S3 bucket name. Here is an
+example configuration that reads these from environment
+variables. Add your own configuration to `config.exs`.
 
+```elixir
+config :s3_direct_upload,
+  aws_access_key: System.get_env("AWS_ACCESS_KEY_ID"),
+  aws_secret_key: System.get_env("AWS_SECRET_ACCESS_KEY"),
+  aws_s3_bucket: System.get_env("AWS_S3_BUCKET")
+
+```
+
+## Documentation
+
+[S3DirectUpload docs](https://hexdocs.pm/s3_direct_upload).
