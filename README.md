@@ -1,6 +1,6 @@
 # S3DirectUpload
 
-Pre-signed S3 upload helper for client-side multipart POSTs.
+Pre-signed S3 upload helper for client-side multipart POSTs in Elixir.
 
 See: [Browser Uploads to S3 using HTML POST Forms](https://aws.amazon.com/articles/1434/)
 
