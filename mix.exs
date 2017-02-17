@@ -7,6 +7,8 @@ defmodule S3DirectUpload.Mixfile do
      elixir: "~> 1.4",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
+     description: description(),
+     package: package(),
      deps: deps()]
   end
 
@@ -20,5 +22,24 @@ defmodule S3DirectUpload.Mixfile do
   defp deps do
     [{:poison, "~> 3.0"},
      {:ex_doc, "~> 0.14", only: :dev, runtime: false}]
+  end
+
+  defp description do
+    """
+    Pre-signed S3 upload helper for client-side multipart POSTs.
+
+    See: [Browser Uploads to S3 using HTML POST Forms](https://aws.amazon.com/articles/1434/)
+    """
+  end
+
+  defp package do
+    [
+     name: :s3_direct_upload,
+     files: ["lib", "mix.exs", "README*", "LICENSE*"],
+     maintainers: ["Andrew Kappen"],
+     licenses: ["Apache 2.0"],
+     links: %{"GitHub" => "https://github.com/akappen/s3_direct_upload",
+              "Docs" => "https://hexdocs.pm/s3_direct_upload"}
+    ]
   end
 end
