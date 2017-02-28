@@ -37,6 +37,7 @@ defmodule S3DirectUpload.Mixfile do
      maintainers: ["Andrew Kappen"],
      licenses: ["Apache 2.0"],
      links: %{"GitHub" => "https://github.com/akappen/s3_direct_upload",
+              "S3 Direct Uploads With Ember And Phoenix" => "http://haughtcodeworks.com/blog/software-development/s3-direct-uploads-with-ember-and-phoenix/",
               "Browser Uploads to S3 using HTML POST Forms" => "https://aws.amazon.com/articles/1434/"}
     ]
   end
