@@ -2,7 +2,9 @@
 
 Pre-signed S3 upload helper for client-side multipart POSTs in Elixir.
 
-See: [Browser Uploads to S3 using HTML POST Forms](https://aws.amazon.com/articles/1434/)
+See: [Browser-Based Upload using HTTP POST (Using AWS Signature Version 4)](http://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-post-example.html)
+
+     [Task 3: Calculate the Signature for AWS Signature Version 4](http://docs.aws.amazon.com/general/latest/gr/sigv4-calculate-signature.html)
 
 ## Installation
 
@@ -16,15 +18,17 @@ end
 ```
 
 This module expects three application configuration settings for the
-AWS access and secret keys and the S3 bucket name. Here is an
-example configuration that reads these from environment
-variables. Add your own configuration to `config.exs`.
+AWS access and secret keys and the S3 bucket name. You may also supply
+an AWS region (the default if you do not is `us-east-1`). Here is an
+example configuration that reads these from environment variables. Add
+your own configuration to `config.exs`.
 
 ```elixir
 config :s3_direct_upload,
   aws_access_key: System.get_env("AWS_ACCESS_KEY_ID"),
   aws_secret_key: System.get_env("AWS_SECRET_ACCESS_KEY"),
-  aws_s3_bucket: System.get_env("AWS_S3_BUCKET")
+  aws_s3_bucket: System.get_env("AWS_S3_BUCKET"),
+  aws_region: System.get_env("AWS_REGION")
 
 ```
 
