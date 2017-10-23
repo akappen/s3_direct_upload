@@ -20,7 +20,7 @@ defmodule S3DirectUpload.Mixfile do
   # Dependencies
   defp deps do
     [{:poison, "~> 2.0 or ~> 3.0"},
-     {:ex_doc, "~> 0.14", only: :dev, runtime: false}]
+     {:ex_doc, "~> 0.18", only: :dev, runtime: false}]
   end
 
   defp description do
