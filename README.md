@@ -3,6 +3,7 @@
 Pre-signed S3 upload helper for client-side multipart POSTs in Elixir.
 
 See:
+
 [Browser-Based Upload using HTTP POST (Using AWS Signature Version 4)](http://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-post-example.html)
 
 [Task 3: Calculate the Signature for AWS Signature Version 4](http://docs.aws.amazon.com/general/latest/gr/sigv4-calculate-signature.html)
