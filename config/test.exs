@@ -5,4 +5,4 @@ config :s3_direct_upload,
   aws_access_key: "123abc",
   aws_secret_key: "abc123",
   aws_s3_bucket: "s3-bucket",
-  expiration_api: S3DirectUpload.StaticExpiration
+  date_util: S3DirectUpload.StaticDateUtil
