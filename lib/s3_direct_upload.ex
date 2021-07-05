@@ -141,8 +141,10 @@ defmodule S3DirectUpload do
     "#{upload.path}/#{upload.file_name}"
   end
 
-  defp hmac(key, data) do
-    :crypto.hmac(:sha256, key, data)
+  if Code.ensure_loaded?(:crypto) and function_exported?(:crypto, :mac, 4) do
+    defp hmac(key, data), do: :crypto.mac(:hmac, :sha256, key, data)
+  else
+    defp hmac(key, data), do: :crypto.hmac(:sha256, key, data)
   end
 
   defp access_key, do: Application.get_env(:s3_direct_upload, :aws_access_key)
